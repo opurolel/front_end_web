@@ -2,8 +2,9 @@
 Projeto desenvolvido individualmente por Leonardo Delmondes
 
 ## Instruções para abrir
-- Para abrir o projeto, dentro de "projeto1_pagina_pessoal" no repositório, vá em "code" e "download zip";
+- Para abrir o projeto, dentro do repositório, vá em "code" e "download zip";
 - Descompacte o zip e abra a pasta no VSCode;
+- Entre na pasta "projeto1_pagina_pessoal";
 - No arquivo "index.html" e com a extensão "Live Server" ativa, clique em "go live" no canto inferior direito e a página web será aberta.
 
 ## Páginas
