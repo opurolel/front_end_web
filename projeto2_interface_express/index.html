@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Metaleira Fest: show de metal underground em São Paulo.">
+  <title>Metaleira Fest | Metal Underground em São Paulo</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Isometra&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Metal+Mania&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <h1 class="logo">Metaleira Fest</h1>
+    <p class="slogan">Metal underground. Sem filtro. Sem concessão.</p>
+
+    <!-- MENU COM LINKS INTERNOS -->
+    <nav class="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="#sobre">O Evento</a></li>
+        <li><a href="#line-up">Informações</a></li>
+        <li><a href="#inscricao">Participe</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+
+    <!-- APRESENTAÇÃO DO TEMA -->
+    <section id="sobre" class="apresentacao">
+      <h2>Uma noite para quem vive o underground</h2>
+      <p>
+        O Metaleira Fest reúne bandas independentes da cena de metal
+        paulistana em uma única noite de peso, velocidade e muita energia.
+        São mais de 6 horas de som ao vivo, com apresentações de thrash,
+        death e black metal.
+      </p>
+      <p>
+        O evento é totalmente independente e feito por fãs, para fãs.
+        Apoie a cena local e venha viver essa experiência.
+      </p>
+
+      <img class="cartaz" src="img/rock.png" alt="Imagem de show de rock">
+    </section>
+
+    <!-- TRÊS CARDS INFORMATIVOS -->
+    <section id="line-up" class="informacoes">
+      <h2>Informações do show</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Data e horário</h3>
+          <p>Sábado, 28 de novembro de 2026</p>
+          <p>Abertura dos portões às 16h</p>
+          <p>Primeira banda às 17h</p>
+        </article>
+
+        <article class="card">
+          <h3>Local</h3>
+          <p>Casa Subsolo (local fictício)</p>
+          <p>Barra Funda, São Paulo – SP</p>
+          <p>Próximo à estação Barra Funda (metrô e CPTM)</p>
+        </article>
+
+        <article class="card">
+          <h3>Line-up</h3>
+          <ul>
+            <li>Necrotério Sonoro (thrash)</li>
+            <li>Altar de Cinzas (death)</li>
+            <li>Névoa Negra (black)</li>
+            <li>Ruído Fúnebre (doom)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DEMONSTRATIVO -->
+    <section id="inscricao" class="participe">
+      <h2>Garanta sua presença</h2>
+      <p>Preencha o formulário abaixo para entrar na lista de presença (formulário demonstrativo).</p>
+
+      <form action="#" method="post" class="formulario">
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="ingresso">Tipo de ingresso</label>
+          <select id="ingresso" name="ingresso">
+            <option value="inteira">Inteira</option>
+            <option value="meia">Meia-entrada</option>
+            <option value="solidario">Solidário (1 kg de alimento)</option>
+          </select>
+        </div>
+
+        <div class="campo campo-check">
+          <input type="checkbox" id="aviso" name="aviso">
+          <label for="aviso">Quero receber novidades sobre o evento</label>
+        </div>
+
+        <button type="submit" class="botao">Quero ir!</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="contato" class="rodape">
+    <p>Metaleira Fest &ndash; evento fictício criado para fins acadêmicos.</p>
+    <p>Contato: contato@noiteabismal.exemplo</p>
+    <p>&copy; 2026 &ndash; Projeto 2 &ndash; Interface Express</p>
+  </footer>
+
+</body>
+</html>

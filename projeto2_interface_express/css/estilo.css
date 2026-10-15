@@ -1,0 +1,262 @@
+
+:root {
+  --cor-fundo: #2d2d2d; 
+  --cor-superficie: #0c0c0c; 
+  --cor-destaque: #b00020; 
+  --cor-texto: #ececec;   
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Metal Mania";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+h2 {
+  color: var(--cor-destaque);
+  /*
+    NOVA PROPRIEDADE 2: clamp()
+    clamp(mínimo, ideal, máximo) cria um tamanho que cresce com a
+    largura da tela (4vw), mas nunca fica menor que 1.6rem nem
+    maior que 2.6rem. Assim o título se adapta sem media query.
+  */
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+a {
+  color: var(--cor-texto);
+}
+
+a:hover,
+a:focus {
+  color: var(--cor-destaque);
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cabecalho {
+  text-align: center;
+  padding: 30px 20px 0;
+  background-color: var(--cor-superficie);
+  border-bottom: 4px solid var(--cor-destaque);
+}
+
+.logo {
+  margin-bottom: 5px;
+  color: var(--cor-destaque);
+  font-size: clamp(2rem, 7vw, 4rem);
+}
+
+.slogan {
+  margin: 0 0 20px;
+  font-style: italic;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0 0 20px;
+  list-style: none;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 8px 18px;
+  border: 2px solid var(--cor-destaque);
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu ul li a:hover,
+.menu ul li a:focus {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  transform: scale(1.08); 
+  outline: none;
+}
+
+#sobre {
+  text-align: center;
+}
+
+.cartaz {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  border: 3px solid var(--cor-destaque);
+  border-radius: 12px;
+  height: clamp(220px, 45vw, 450px);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 260px; 
+  padding: 20px;
+  background-color: var(--cor-superficie);
+  border: 2px solid var(--cor-fundo);
+  border-left: 6px solid var(--cor-destaque);
+  border-radius: 10px;
+  /*
+    NOVA PROPRIEDADE 1: box-shadow
+    Cria uma sombra ao redor da caixa.
+    Valores: deslocamento-x, deslocamento-y, desfoque, cor.
+    Aqui a sombra é vermelha e fica "brilhando" abaixo do card.
+  */
+  box-shadow: 0 6px 12px var(--cor-destaque);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 24px var(--cor-destaque);
+}
+
+.cards .card h3 {
+  margin-bottom: 10px;
+  color: var(--cor-destaque);
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#inscricao {
+  text-align: center;
+}
+
+.formulario {
+  max-width: 500px;
+  margin: 25px auto 0;
+  padding: 25px;
+  text-align: left;
+  background-color: var(--cor-superficie);
+  border: 2px solid var(--cor-destaque);
+  border-radius: 12px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo select {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-superficie);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--cor-destaque);
+  outline: none;
+}
+
+.campo-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.campo-check label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.botao {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-destaque);
+  border-radius: 6px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.botao:hover,
+.botao:focus {
+  background-color: var(--cor-fundo);
+  transform: scale(1.03);
+}
+
+.rodape {
+  margin-top: 30px;
+  padding: 25px 20px;
+  text-align: center;
+  background-color: var(--cor-superficie);
+  border-top: 4px solid var(--cor-destaque);
+  font-size: 0.95rem;
+}
+
+.rodape p {
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .formulario {
+    padding: 18px;
+  }
+}
