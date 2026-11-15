@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descubra seu caminho no Front-End</title>
+  <meta name="description" content="Escolha entre HTML, CSS e JavaScript e receba uma orientação para começar sua jornada no Front-End.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="pagina">
+
+  <header class="topo" id="topo">
+    <p class="topo__marca">Trilha Front-End</p>
+
+    <!-- aria-pressed: altere para "true" quando o tema escuro estiver ativo -->
+    <button type="button" id="btn-tema" class="botao botao--secundario" aria-pressed="false">
+      Trocar tema
+    </button>
+  </header>
+
+  <main class="conteudo" id="conteudo">
+
+    <section class="apresentacao" id="apresentacao" aria-labelledby="titulo-pagina">
+      <h1 id="titulo-pagina">Descubra seu caminho no Front-End</h1>
+      <p class="apresentacao__texto">
+        Diga seu nome, escolha a tecnologia que mais chama sua atenção
+        e receba uma orientação de por onde começar.
+      </p>
+    </section>
+
+    <section class="formulario" id="secao-formulario" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario" class="visualmente-oculto">Seus dados</h2>
+
+      <form id="form-orientacao" novalidate>
+
+        <div class="campo">
+          <label for="campo-nome">Seu nome</label>
+          <input
+            type="text"
+            id="campo-nome"
+            name="nome"
+            placeholder="Como posso te chamar?"
+            autocomplete="given-name"
+            required
+            aria-describedby="erro-nome">
+          <!-- Use este elemento para mensagens de validação -->
+          <p id="erro-nome" class="campo__erro" role="alert" hidden></p>
+        </div>
+
+        <fieldset class="escolha" id="grupo-tecnologia">
+          <legend>Qual tecnologia você quer explorar primeiro?</legend>
+
+          <div class="escolha__opcoes">
+            <div class="escolha__item">
+              <input type="radio" id="opcao-html" name="tecnologia" value="html">
+              <label for="opcao-html">
+                <span class="escolha__titulo">HTML</span>
+                <span class="escolha__descricao">Estrutura e conteúdo</span>
+              </label>
+            </div>
+
+            <div class="escolha__item">
+              <input type="radio" id="opcao-css" name="tecnologia" value="css">
+              <label for="opcao-css">
+                <span class="escolha__titulo">CSS</span>
+                <span class="escolha__descricao">Estilo e layout</span>
+              </label>
+            </div>
+
+            <div class="escolha__item">
+              <input type="radio" id="opcao-javascript" name="tecnologia" value="javascript">
+              <label for="opcao-javascript">
+                <span class="escolha__titulo">JavaScript</span>
+                <span class="escolha__descricao">Interação e lógica</span>
+              </label>
+            </div>
+          </div>
+
+          <p id="erro-tecnologia" class="campo__erro" role="alert" hidden></p>
+        </fieldset>
+
+        <button type="submit" id="btn-gerar" class="botao botao--primario">
+          Gerar orientação
+        </button>
+
+      </form>
+    </section>
+
+    <section class="resultado" id="secao-resultado" aria-labelledby="titulo-resultado">
+      <h2 id="titulo-resultado">Sua orientação</h2>
+
+      <!-- aria-live avisa leitores de tela quando o conteúdo mudar -->
+      <div id="area-resultado" class="resultado__area" aria-live="polite">
+        <p id="texto-resultado" class="resultado__texto resultado__texto--vazio">
+          Sua orientação aparecerá aqui.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape" id="rodape">
+    <p>Feito para quem está começando no Front-End.</p>
+  </footer>
+  <script src="js/script.js"></script>
+  <input type="">
+</body>
+</html>
