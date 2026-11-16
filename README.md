@@ -196,5 +196,6 @@ git clone https://github.com/opurolel/front_end_web.git
 
 Repositório organizado como registro de estudo da disciplina.
 
-- **Nome:** _Leonardo Delmondes Cunha]_
+- **Nome:** _Leonardo Delmondes Cunha_
+- **RGM:** _047531495_
 ---
